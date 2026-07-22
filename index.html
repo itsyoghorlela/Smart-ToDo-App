@@ -3,11 +3,16 @@
 
 <head>
 
+    <!-- ===============================
+         PAGE SETTINGS
+    ================================ -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>To-Do List App</title>
+    <title>My To-Do List</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
     <!-- Font Awesome -->
@@ -18,25 +23,86 @@
 
 <body>
 
+    <!-- ===============================
+         MAIN CONTAINER
+    ================================ -->
+
     <div class="container">
 
         <h1>📝 My To-Do List</h1>
 
-        <div class="input-area">
+        <!-- ===============================
+             INPUT AREA
+             Add a new task
+        ================================ -->
 
-            <input
-                type="text"
-                id="taskInput"
-                placeholder="Add a new task...">
+<div class="input-area">
 
-            <button id="addBtn">Add</button>
+    <input
+        type="text"
+        id="taskInput"
+        placeholder="Add a new task..."
+    >
+
+    <input
+        type="date"
+        id="dueDateInput"
+    >
+
+    <button id="addBtn">
+        Add
+    </button>
+
+</div>
+
+        <!-- ===============================
+             TASK COUNTER
+             Shows task statistics
+        ================================ -->
+
+        <div class="task-counter">
+
+            <div class="counter-box">
+                <h3 id="totalTasks">0</h3>
+                <p>Total</p>
+            </div>
+
+            <div class="counter-box">
+                <h3 id="completedTasks">0</h3>
+                <p>Completed</p>
+            </div>
+
+            <div class="counter-box">
+                <h3 id="remainingTasks">0</h3>
+                <p>Remaining</p>
+            </div>
 
         </div>
 
+        <!-- ===============================
+             TASK LIST
+             Tasks will be created here
+        ================================ -->
+
         <ul id="taskList"></ul>
+
+        <!-- ===============================
+             ACTION BUTTONS
+             Manage all tasks
+        ================================ -->
+
+        <div class="action-buttons">
+
+            <button id="deleteAllBtn">
+                <i class="fa-solid fa-trash"></i>
+                Delete All
+            </button>
+
+        </div>
 
     </div>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>

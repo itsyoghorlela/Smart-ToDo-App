@@ -1,197 +1,294 @@
+/* ===============================
+   GOOGLE FONT
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ===============================
+   RESET
+================================ */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
+
+/* ===============================
+   PAGE
+================================ */
 
 body{
-
-    font-family:Arial, Helvetica, sans-serif;
-
-    background:linear-gradient(135deg,#6C63FF,#4ECDC4);
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
+    background:linear-gradient(135deg,#F7E5D0,#FFE5FC);
     min-height:100vh;
-
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
 }
 
+/* ===============================
+   MAIN CONTAINER
+================================ */
+
 .container{
-
+    width:100%;
+    max-width:550px;
     background:white;
-
-    width:90%;
-    max-width:450px;
-
     padding:30px;
-
-    border-radius:20px;
-
-    box-shadow:0 20px 40px rgba(0,0,0,.25);
-
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
 }
 
 h1{
-
     text-align:center;
-
     margin-bottom:25px;
-
     color:#333;
-
 }
+
+/* ===============================
+   INPUT AREA
+================================ */
 
 .input-area{
-
     display:flex;
-
     gap:10px;
-
-    margin-bottom:25px;
-
+    margin-bottom:20px;
 }
 
-input{
-
+.input-area input{
     flex:1;
-
     padding:12px;
-
     border:2px solid #ddd;
-
     border-radius:10px;
-
-    font-size:16px;
-
     outline:none;
-
+    font-size:16px;
 }
 
-input:focus{
-
-    border-color:#6C63FF;
-
+.input-area input:focus{
+    border-color:#F7E5D0;
 }
 
 #addBtn{
-
-    background:#6C63FF;
-
+    background:#48D633;
     color:white;
-
     border:none;
-
-    padding:12px 18px;
-
+    padding:12px 22px;
     border-radius:10px;
-
     cursor:pointer;
-
     transition:.3s;
-
 }
 
 #addBtn:hover{
-
-    background:#5548e6;
-
-    transform:translateY(-2px);
-
+    background:#F7E5D0;
 }
 
-ul{
+/* ===============================
+   TASK COUNTER
+================================ */
 
-    list-style:none;
-
-}
-
-li{
-
+.task-counter{
     display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    background:#f7f7f7;
-
-    padding:12px 15px;
-
-    margin-bottom:12px;
-
-    border-radius:10px;
-
-    transition:.3s;
-
+    gap:12px;
+    margin-bottom:20px;
 }
 
-li:hover{
+.counter-box{
+    flex:1;
+    background:#f8f8f8;
+    border-radius:12px;
+    text-align:center;
+    padding:15px;
+    box-shadow:0 3px 8px rgba(0,0,0,.08);
+    transition:.25s;
+}
 
-    background:#ececec;
+.counter-box:hover{
+    transform:translateY(-3px);
+}
 
+.counter-box h3{
+    font-size:28px;
+    margin-bottom:5px;
+}
+
+.counter-box p{
+    color:#777;
+    font-size:14px;
+}
+
+.counter-box:nth-child(1) h3{
+    color:#6C63FF;
+}
+
+.counter-box:nth-child(2) h3{
+    color:#4CAF50;
+}
+
+.counter-box:nth-child(3) h3{
+    color:#FF9800;
+}
+
+/* ===============================
+   TASK LIST
+================================ */
+
+#taskList{
+    list-style:none;
+}
+
+#taskList li{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#fafafa;
+    margin-bottom:12px;
+    padding:14px;
+    border-radius:10px;
+    transition:.25s;
+}
+
+#taskList li:hover{
+    transform:translateY(-2px);
 }
 
 .task-text{
-
     flex:1;
-
-    cursor:pointer;
-
+    word-break:break-word;
 }
 
 .completed{
-
     text-decoration:line-through;
+    color:#999;
+    opacity:.7;
+}
 
-    color:gray;
+/* ===============================
+   BUTTONS
+================================ */
 
-    opacity:.6;
+.edit-btn,
+.delete-btn{
+    border:none;
+    color:white;
+    cursor:pointer;
+    padding:9px 12px;
+    border-radius:8px;
+    transition:.25s;
+}
 
+.edit-btn{
+    background:#4CAF50;
+}
+
+.edit-btn:hover{
+    background:#3f9442;
 }
 
 .delete-btn{
-
-    background:#ff4d4d;
-
-    color:white;
-
-    border:none;
-
-    width:40px;
-
-    height:40px;
-
-    border-radius:50%;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-li input[type="checkbox"]{
-    width:20px;
-    height:20px;
-    cursor:pointer;
-    margin-right:15px;
+    background:#F44336;
 }
 
-.task-text{
-    flex:1;
-}
-
-.completed{
-    text-decoration:line-through;
-    color:gray;
-    opacity:.6;
-}
 .delete-btn:hover{
+    background:#d63031;
+}
 
-    background:#d90000;
+/* ===============================
+   ACTION BUTTONS
+================================ */
 
-    transform:scale(1.1);
+.action-buttons{
+    margin-top:20px;
+}
 
+#deleteAllBtn{
+    width:100%;
+    border:none;
+    background:#F44336;
+    color:white;
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.25s;
+    font-size:15px;
+}
+
+#deleteAllBtn:hover{
+    background:#d63031;
+}
+
+/* ===============================
+   EMPTY STATE
+================================ */
+
+.empty-state{
+    text-align:center;
+    color:#888;
+    padding:40px 20px;
+}
+
+.empty-state h2{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.empty-state p{
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.empty-state small{
+    color:#aaa;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media(max-width:600px){
+
+    .input-area{
+        flex-direction:column;
+    }
+
+    .task-counter{
+        flex-direction:column;
+    }
+
+}
+
+.task-status {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+.overdue {
+    color: red;
+}
+
+.today {
+    color: green;
+}
+
+.task-content {
+    flex: 1;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.task-date {
+    font-size: 14px;
+    margin-top: 6px;
+    color: #666;
+}
+
+.task-status {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 4px;
 }
