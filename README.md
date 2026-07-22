@@ -5,9 +5,6 @@ A modern and responsive To-Do List web application built with **HTML, CSS, and J
 ---
 
 ## 📸 Screenshot
-
-> *(Add a screenshot of your application here.)*
-
 ![To-Do App Screenshot](./assets/todo-app-screenshot.png)
 
 ---
